@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3h6-fl-mDu">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PBViewController" customModule="sugimaruGoGo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kw8-ow-ivg">
+                                <rect key="frame" x="137" y="377" width="46" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="GO!"/>
+                                <connections>
+                                    <segue destination="I3A-uH-IL4" kind="show" id="PWg-8U-7Ju"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="DeU-fr-gT8">
+                                <rect key="frame" x="0.0" y="176" width="320" height="216"/>
+                                <locale key="locale" localeIdentifier="ja"/>
+                                <connections>
+                                    <action selector="changeTime:" destination="BYZ-38-t0r" eventType="valueChanged" id="nGZ-DJ-MpX"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="いま何時 ？" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ui3-3U-CAX">
+                                <rect key="frame" x="67" y="134" width="186" height="36"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ui3-3U-CAX" secondAttribute="trailing" constant="67" id="0x0-Nl-jcw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kw8-ow-ivg" secondAttribute="trailing" constant="137" id="19Z-bX-rBf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Kw8-ow-ivg" secondAttribute="bottom" constant="100" id="DY6-HS-yRV"/>
+                            <constraint firstItem="DeU-fr-gT8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Q4l-jf-aAy"/>
+                            <constraint firstItem="DeU-fr-gT8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QP1-Yd-ded"/>
+                            <constraint firstItem="Ui3-3U-CAX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="T3n-d7-ix1"/>
+                            <constraint firstItem="Kw8-ow-ivg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="137" id="XUB-sX-5Aq"/>
+                            <constraint firstItem="Ui3-3U-CAX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="a95-yE-k6t"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Kw8-ow-ivg" secondAttribute="bottom" constant="100" id="kpm-WP-i2j"/>
+                            <constraint firstItem="DeU-fr-gT8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r70-Si-2yo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="I9g-4R-ciP"/>
+                    <connections>
+                        <outlet property="imajikan" destination="Ui3-3U-CAX" id="1lt-Zy-TAI"/>
+                        <outlet property="sugiTime" destination="DeU-fr-gT8" id="AOA-9a-gDt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2038.125" y="121.47887323943662"/>
+        </scene>
+        <!--Present View Controller-->
+        <scene sceneID="5oI-lF-Xag">
+            <objects>
+                <viewController id="I3A-uH-IL4" customClass="PresentViewController" customModule="sugimaruGoGo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gw4-eM-NxI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="●●時●●分のすぎ丸に乗れば…" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3f-Cc-NFE">
+                                <rect key="frame" x="16" y="144" width="288" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="気をつけて行ってきてね！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Met-68-9yl">
+                                <rect key="frame" x="35" y="389.5" width="250" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="●●時●●分に西荻窪に着くよ！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgo-1M-oVy">
+                                <rect key="frame" x="10" y="272" width="300" height="24"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="OIb-M0-sn3" firstAttribute="trailing" secondItem="Met-68-9yl" secondAttribute="trailing" constant="35" id="19v-MO-6QZ"/>
+                            <constraint firstItem="l3f-Cc-NFE" firstAttribute="top" secondItem="OIb-M0-sn3" secondAttribute="top" constant="100" id="5fh-Ze-bJS"/>
+                            <constraint firstItem="bgo-1M-oVy" firstAttribute="centerX" secondItem="gw4-eM-NxI" secondAttribute="centerX" id="7sV-Mc-Zcv"/>
+                            <constraint firstItem="OIb-M0-sn3" firstAttribute="bottom" secondItem="Met-68-9yl" secondAttribute="bottom" constant="103" id="E5g-o9-MKH"/>
+                            <constraint firstItem="OIb-M0-sn3" firstAttribute="trailing" secondItem="l3f-Cc-NFE" secondAttribute="trailing" constant="16" id="IQm-fL-HKf"/>
+                            <constraint firstItem="Met-68-9yl" firstAttribute="leading" secondItem="OIb-M0-sn3" secondAttribute="leading" constant="35" id="Tpm-K9-Y6b"/>
+                            <constraint firstItem="bgo-1M-oVy" firstAttribute="centerY" secondItem="gw4-eM-NxI" secondAttribute="centerY" id="mBg-00-v1J"/>
+                            <constraint firstItem="l3f-Cc-NFE" firstAttribute="leading" secondItem="OIb-M0-sn3" secondAttribute="leading" constant="16" id="tCD-34-Gh9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OIb-M0-sn3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9IS-dO-sTS"/>
+                    <connections>
+                        <outlet property="ichi" destination="l3f-Cc-NFE" id="dYT-t5-Xhg"/>
+                        <outlet property="kime" destination="Met-68-9yl" id="5cR-YM-7X8"/>
+                        <outlet property="nini" destination="bgo-1M-oVy" id="J5T-j2-yTS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QS8-oP-Efq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2936.25" y="120.4225352112676"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="GlD-HO-pKz">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="3h6-fl-mDu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CSs-wz-Hbe">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="jxo-ZH-hZ6" kind="relationship" relationship="viewControllers" id="3k6-hN-qli"/>
+                        <segue destination="qkB-wY-zZ7" kind="relationship" relationship="viewControllers" id="9Hm-lS-azD"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l3a-fQ-HNy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="121.875"/>
+        </scene>
+        <!--すぎ丸時刻表-->
+        <scene sceneID="iF2-hu-zlo">
+            <objects>
+                <viewController id="qkB-wY-zZ7" customClass="OnWebViewController" customModule="sugimaruGoGo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oNE-hd-pDx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7m-PN-o8b">
+                                <rect key="frame" x="14" y="263.5" width="292" height="41"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="24"/>
+                                <state key="normal" title="もっかい時刻表を見たいよ">
+                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="oneMoreButtonTaped:" destination="qkB-wY-zZ7" eventType="touchUpInside" id="zqS-um-2o8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="I7m-PN-o8b" firstAttribute="centerY" secondItem="oNE-hd-pDx" secondAttribute="centerY" id="SvP-Rh-z50"/>
+                            <constraint firstItem="I7m-PN-o8b" firstAttribute="centerX" secondItem="oNE-hd-pDx" secondAttribute="centerX" id="gw6-mQ-H2H"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xTl-5v-pUT"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="すぎ丸時刻表" image="desktopcomputer" catalog="system" selectedImage="desktopcomputer" id="dJF-KT-rat"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eT4-xC-RYU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1041" y="920"/>
+        </scene>
+        <!--今何時？-->
+        <scene sceneID="QLx-Uk-zJY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jxo-ZH-hZ6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="今何時？" image="magnifyingglass" catalog="system" selectedImage="magnifyingglass" id="XoH-W3-eZ4"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="T11-qH-u46">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="y8C-Hk-3NJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xYG-31-f78" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1040.625" y="121.47887323943662"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="desktopcomputer" catalog="system" width="64" height="50"/>
+        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
+    </resources>
+</document>
