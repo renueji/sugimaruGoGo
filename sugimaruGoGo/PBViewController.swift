@@ -11,8 +11,8 @@ import UIKit
 class PBViewController: UIViewController {
 
     //デイトピッカーとラベルをコードと接続
-    @IBOutlet weak var sugiTime: UIDatePicker!
-    @IBOutlet weak var imajikan: UILabel!
+    @IBOutlet weak var selectPicker: UIDatePicker!
+    @IBOutlet weak var nowTime: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,7 @@ class PBViewController: UIViewController {
     //デイトピッカーが変更されたときの処理
     @IBAction func changeTime(_ sender: UIDatePicker) {
         //ラベルにデイトピッカーの値を表示
-        imajikan.text = self.format(date: sugiTime.date)
+        nowTime.text = self.format(date: selectPicker.date)
         
     }
     
@@ -42,7 +42,7 @@ class PBViewController: UIViewController {
     override func prepare(for segue:UIStoryboardSegue, sender: Any?) {
 //次の画面にデータを渡す
         if let controller = segue.destination as? PresentViewController {
-            controller.uketime = imajikan.text!
+            controller.getTime = nowTime.text!
         } else {
             print("")
         }

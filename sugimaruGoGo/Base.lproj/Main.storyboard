@@ -54,8 +54,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="I9g-4R-ciP"/>
                     <connections>
-                        <outlet property="imajikan" destination="Ui3-3U-CAX" id="1lt-Zy-TAI"/>
-                        <outlet property="sugiTime" destination="DeU-fr-gT8" id="AOA-9a-gDt"/>
+                        <outlet property="nowTime" destination="Ui3-3U-CAX" id="1lt-Zy-TAI"/>
+                        <outlet property="selectPicker" destination="DeU-fr-gT8" id="AOA-9a-gDt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -104,9 +104,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="9IS-dO-sTS"/>
                     <connections>
-                        <outlet property="ichi" destination="l3f-Cc-NFE" id="dYT-t5-Xhg"/>
-                        <outlet property="kime" destination="Met-68-9yl" id="5cR-YM-7X8"/>
-                        <outlet property="nini" destination="bgo-1M-oVy" id="J5T-j2-yTS"/>
+                        <outlet property="firstLabel" destination="l3f-Cc-NFE" id="dYT-t5-Xhg"/>
+                        <outlet property="thirdLabel" destination="Met-68-9yl" id="5cR-YM-7X8"/>
+                        <outlet property="secondLabel" destination="bgo-1M-oVy" id="J5T-j2-yTS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QS8-oP-Efq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
